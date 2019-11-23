@@ -1,12 +1,4 @@
-//creating the container
-let container = document.createElement("div");
-container.classList.add("container");
-container.style.width = "75px";
-container.style.align = "center";
-
-//Creating the password generator
-
-//using getRandomInt() function
+//using getRandomInt() function and //Creating the password generator
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
