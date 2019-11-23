@@ -17,8 +17,11 @@ function passwordGenerator(num, mixedCase) {
   return pass;
 }
 
+//updating input field with a new pass each time
 function generatePasswordDOM() {
-  let newPassword = passwordGenerator(20, true);
+  let passlen = document.getElementById("length").value;
+  let mixedCases = document.getElementById("mixedCase").checked;
+  let newPassword = passwordGenerator(passlen, mixedCases);
   document.getElementById("password").setAttribute("value", newPassword);
 }
 
@@ -27,3 +30,6 @@ function generatePasswordDOM() {
 document
   .getElementById("generate")
   .addEventListener("click", generatePasswordDOM);
+
+//adding checkbox
+document.getElementById("mixedcase");
