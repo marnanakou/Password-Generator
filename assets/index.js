@@ -16,4 +16,14 @@ function passwordGenerator(num, mixedCase) {
   }
   return pass;
 }
-console.log(passwordGenerator(10, true));
+
+function generatePasswordDOM() {
+  let newPassword = passwordGenerator(20, true);
+  document.getElementById("password").setAttribute("value", newPassword);
+}
+
+//Register an event for the button to generate a new password.
+
+document
+  .getElementById("generate")
+  .addEventListener("click", generatePasswordDOM);
